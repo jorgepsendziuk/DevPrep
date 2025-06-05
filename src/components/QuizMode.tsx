@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useStudyContext } from '../contexts/StudyContext';
-import { Question } from '../data/questions';
 
 const QuizMode = () => {
   const { trackId } = useParams<{ trackId: string }>();

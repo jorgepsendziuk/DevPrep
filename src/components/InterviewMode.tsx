@@ -20,10 +20,10 @@ const InterviewMode = () => {
 
   // Efeito para o timer
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: number;
     
     if (isTimerRunning && timeRemaining > 0) {
-      timer = setInterval(() => {
+      timer = window.setInterval(() => {
         setTimeRemaining(prev => prev - 1);
       }, 1000);
     } else if (timeRemaining === 0 && isTimerRunning) {
@@ -32,7 +32,7 @@ const InterviewMode = () => {
     }
     
     return () => {
-      if (timer) clearInterval(timer);
+      if (timer) window.clearInterval(timer);
     };
   }, [isTimerRunning, timeRemaining]);
 
