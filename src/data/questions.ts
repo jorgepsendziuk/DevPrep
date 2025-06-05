@@ -1,5 +1,5 @@
 // Banco de questões para o guia de estudos
-// Organizado por trilha (React, Full Stack, DevOps) e nível de dificuldade
+// Organizado por trilha (React, Full Stack, DevOps, Business Analyst) e nível de dificuldade
 
 export interface Question {
   id: string;
@@ -359,6 +359,150 @@ export const devOpsQuestions: Question[] = [
   }
 ];
 
+// Questões de Tech Business Analyst
+export const businessAnalystQuestions: Question[] = [
+  {
+    id: 'ba-1',
+    text: 'O que é um Business Requirements Document (BRD) e qual é seu propósito principal?',
+    options: [
+      'Um documento técnico que detalha a arquitetura do sistema',
+      'Um documento que captura as necessidades de negócio de alto nível e os objetivos de um projeto',
+      'Um guia de estilo para desenvolvimento de software',
+      'Um relatório financeiro sobre o ROI do projeto'
+    ],
+    correctAnswer: 1,
+    explanation: 'Um BRD (Business Requirements Document) é um documento formal que captura as necessidades de negócio de alto nível, objetivos, escopo e critérios de sucesso de um projeto. Serve como a base para todas as atividades de desenvolvimento subsequentes e garante alinhamento entre stakeholders sobre o que precisa ser alcançado.',
+    difficulty: 'iniciante',
+    category: 'Documentação'
+  },
+  {
+    id: 'ba-2',
+    text: 'Qual é a diferença entre requisitos funcionais e não funcionais?',
+    options: [
+      'Funcionais são obrigatórios, não funcionais são opcionais',
+      'Funcionais descrevem o que o sistema deve fazer, não funcionais descrevem como o sistema deve se comportar',
+      'Funcionais são para frontend, não funcionais para backend',
+      'Não há diferença, são apenas terminologias diferentes'
+    ],
+    correctAnswer: 1,
+    explanation: 'Requisitos funcionais descrevem as funcionalidades específicas que o sistema deve executar (ex: "o sistema deve permitir login via email"). Requisitos não funcionais descrevem como o sistema deve se comportar em termos de performance, segurança, usabilidade, etc. (ex: "o sistema deve responder em menos de 2 segundos").',
+    difficulty: 'iniciante',
+    category: 'Análise de Requisitos'
+  },
+  {
+    id: 'ba-3',
+    text: 'No contexto Agile, o que são User Stories e qual é sua estrutura típica?',
+    options: [
+      'Histórias sobre usuários reais do sistema',
+      'Documentos técnicos detalhados sobre funcionalidades',
+      'Descrições curtas de funcionalidades escritas da perspectiva do usuário final, seguindo o formato "Como [tipo de usuário], eu quero [funcionalidade] para [benefício]"',
+      'Relatórios de bugs encontrados pelos usuários'
+    ],
+    correctAnswer: 2,
+    explanation: 'User Stories são descrições curtas e simples de funcionalidades escritas da perspectiva do usuário final. Seguem tipicamente o formato: "Como [tipo de usuário], eu quero [funcionalidade] para [benefício/razão]". Elas capturam o "quem", "o quê" e "por quê" de um requisito de forma concisa e centrada no usuário.',
+    difficulty: 'iniciante',
+    category: 'Metodologias Ágeis'
+  },
+  {
+    id: 'ba-4',
+    text: 'O que é gap analysis e quando ela é mais utilizada?',
+    options: [
+      'Uma análise financeira dos custos do projeto',
+      'Uma técnica para identificar a diferença entre o estado atual e o estado desejado de um processo ou sistema',
+      'Um método para avaliar a performance dos desenvolvedores',
+      'Uma ferramenta para medir a satisfação do usuário'
+    ],
+    correctAnswer: 1,
+    explanation: 'Gap Analysis é uma técnica usada para identificar e analisar a diferença entre o estado atual ("As-Is") e o estado desejado ("To-Be") de um processo, sistema ou organização. É especialmente útil em projetos de migração, transformação digital e melhorias de processos para identificar que mudanças são necessárias.',
+    difficulty: 'intermediário',
+    category: 'Análise de Processos'
+  },
+  {
+    id: 'ba-5',
+    text: 'Em projetos de migração de plataforma, qual é o papel principal do Business Analyst?',
+    options: [
+      'Desenvolver o código da nova plataforma',
+      'Analisar os sistemas existentes, documentar processos atuais e definir requisitos para a nova plataforma',
+      'Testar a nova plataforma após desenvolvimento',
+      'Gerenciar o orçamento do projeto'
+    ],
+    correctAnswer: 1,
+    explanation: 'Em migrações de plataforma, o BA tem papel crucial na análise dos sistemas legados, documentação dos processos atuais (As-Is), identificação de gaps, definição de requisitos para a nova plataforma (To-Be), e facilitação da transição. Eles garantem que nenhuma funcionalidade crítica seja perdida e que melhorias sejam identificadas.',
+    difficulty: 'intermediário',
+    category: 'Migração de Tecnologia'
+  },
+  {
+    id: 'ba-6',
+    text: 'Quais são as principais responsabilidades na gestão de stakeholders para um Business Analyst?',
+    options: [
+      'Apenas documentar o que os stakeholders pedem',
+      'Identificar, analisar, engajar e gerenciar expectativas de todas as partes interessadas no projeto',
+      'Defender sempre as posições da área técnica',
+      'Focar apenas nos stakeholders que pagam pelo projeto'
+    ],
+    correctAnswer: 1,
+    explanation: 'A gestão de stakeholders envolve: identificar todas as partes interessadas, analisar seus interesses e influência, planejar estratégias de engajamento, facilitar comunicação efetiva, gerenciar expectativas e conflitos, e garantir alinhamento contínuo. O BA atua como ponte entre business e tecnologia.',
+    difficulty: 'intermediário',
+    category: 'Gestão de Stakeholders'
+  },
+  {
+    id: 'ba-7',
+    text: 'No contexto de Large-Scale Transformation Programs, quais frameworks/metodologias são mais comumente utilizados?',
+    options: [
+      'Apenas Waterfall devido à complexidade',
+      'SAFe (Scaled Agile Framework), PRINCE2, PMI e metodologias híbridas que combinam Agile com práticas tradicionais',
+      'Apenas Scrum tradicional',
+      'Metodologias proprietárias de cada empresa'
+    ],
+    correctAnswer: 1,
+    explanation: 'Transformações de grande escala tipicamente requerem frameworks robustos como SAFe (Scaled Agile Framework) para coordenar múltiplas equipes ágeis, PRINCE2 para governança estruturada, PMI para gestão de programas, e abordagens híbridas que combinam práticas ágeis com rigor de governança tradicional.',
+    difficulty: 'avançado',
+    category: 'Transformação Digital'
+  },
+  {
+    id: 'ba-8',
+    text: 'Como você abordaria a identificação de riscos e dependências em um projeto de transição tecnológica?',
+    explanation: 'Para identificar riscos e dependências em transições tecnológicas, seguiria esta abordagem: 1) Mapeamento completo do estado atual (sistemas, processos, integrações); 2) Análise de impacto nas operações; 3) Identificação de dependências técnicas e de negócio; 4) Workshops com stakeholders técnicos e de negócio; 5) Análise de precedentes em projetos similares; 6) Criação de matriz de riscos com probabilidade e impacto; 7) Desenvolvimento de planos de mitigação e contingência; 8) Estabelecimento de monitoramento contínuo durante a execução.',
+    difficulty: 'avançado',
+    category: 'Gestão de Riscos'
+  },
+  {
+    id: 'ba-9',
+    text: 'Quais são as principais considerações regulatórias e de compliance na indústria farmacêutica/life sciences?',
+    options: [
+      'Apenas FDA nos EUA',
+      'FDA (EUA), EMA (Europa), GxP (Good Practices), 21 CFR Part 11, GDPR, e requisitos de rastreabilidade e auditoria',
+      'Apenas requisitos de qualidade ISO',
+      'Somente regulamentações locais de cada país'
+    ],
+    correctAnswer: 1,
+    explanation: 'A indústria farmacêutica é altamente regulada, com requisitos incluindo: FDA (EUA) e EMA (Europa) para aprovações, GxP (GMP, GCP, GLP) para boas práticas, 21 CFR Part 11 para registros eletrônicos, GDPR para proteção de dados, rastreabilidade completa, validação de sistemas computadorizados, e capacidade de auditoria. Mudanças tecnológicas devem manter compliance com todas essas regulamentações.',
+    difficulty: 'avançado',
+    category: 'Compliance Farmacêutico'
+  },
+  {
+    id: 'ba-10',
+    text: 'Como você estruturaria um plano de knowledge transfer para uma transição tecnológica?',
+    explanation: 'Um plano efetivo de knowledge transfer incluiria: 1) Mapeamento de conhecimento crítico e especialistas; 2) Identificação dos receptores do conhecimento; 3) Definição de formatos de transferência (documentação, treinamentos, shadowing); 4) Cronograma alinhado com fases do projeto; 5) Métricas de efetividade (testes, competency assessments); 6) Documentação estruturada (procedimentos, troubleshooting, FAQs); 7) Sessões hands-on e simulações; 8) Estabelecimento de support network pós-transição; 9) Validação da transferência através de operação assistida.',
+    difficulty: 'avançado',
+    category: 'Gestão do Conhecimento'
+  },
+  {
+    id: 'ba-11',
+    text: 'Quais métricas você usaria para medir o sucesso de uma iniciativa de technology operations transition?',
+    explanation: 'Métricas-chave para medir sucesso de transições tecnológicas: 1) Operacionais: uptime, performance, response time, error rates; 2) Financeiras: TCO, ROI, cost savings realizados; 3) Qualidade: defect rates, customer satisfaction, compliance score; 4) Eficiência: time to resolution, automation level, productivity metrics; 5) Riscos: security incidents, compliance violations; 6) Adoção: user adoption rate, training completion; 7) Business value: process improvement, capability gains; 8) Timeline: milestone adherence, time to value. Dashboard executivo com red/amber/green status para comunicação efetiva.',
+    difficulty: 'avançado',
+    category: 'Métricas e KPIs'
+  },
+  {
+    id: 'ba-12',
+    text: 'Como você facilitaria workshops de requirements gathering com stakeholders multiculturais (Índia e EUA)?',
+    explanation: 'Para workshops multiculturais efetivos: 1) Planejamento: considerar fusos horários, feriados locais, estilos de comunicação; 2) Estrutura: agenda clara, objetivos definidos, tempo para participação de todos; 3) Facilitação: linguagem clara, evitar jargões, confirmar entendimento; 4) Tecnologia: plataformas colaborativas, gravação para revisão; 5) Dinâmica: alternar horários para equilibrar inconveniência, breakout rooms por região/função; 6) Documentação: templates visuais, glossário de termos; 7) Follow-up: resumos claros, validação por escrito; 8) Sensibilidade cultural: respeitar hierarquias, estilos de feedback, prazos de resposta diferentes.',
+    difficulty: 'avançado',
+    category: 'Facilitação Global'
+  }
+];
+
 // Questões de desafio prático
 export const practicalChallenges: Question[] = [
   {
@@ -482,6 +626,7 @@ export const allQuestions = [
   ...reactQuestions,
   ...fullStackQuestions,
   ...devOpsQuestions,
+  ...businessAnalystQuestions,
   ...practicalChallenges
 ];
 
@@ -494,6 +639,8 @@ export const getQuestionsByTrack = (track: string) => {
       return fullStackQuestions;
     case 'devops':
       return devOpsQuestions;
+    case 'business-analyst':
+      return businessAnalystQuestions;
     case 'challenges':
       return practicalChallenges;
     default:

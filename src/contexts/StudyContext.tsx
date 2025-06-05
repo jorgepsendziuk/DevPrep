@@ -2,7 +2,7 @@ import { createContext, useState, useContext, ReactNode } from 'react';
 import { Question, getQuestionsByTrack } from '../data/questions';
 
 // Definindo os tipos para o contexto
-type Track = 'react' | 'fullstack' | 'devops' | 'challenges';
+type Track = 'react' | 'fullstack' | 'devops' | 'business-analyst' | 'challenges';
 type StudyMode = 'learn' | 'quiz' | 'interview' | 'challenge';
 type Difficulty = 'iniciante' | 'intermediário' | 'avançado' | 'all';
 

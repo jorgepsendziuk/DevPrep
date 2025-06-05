@@ -7,7 +7,7 @@ const HomePage = () => {
   const { setCurrentTrack, userProgress, resetProgress } = useStudyContext();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
 
-  const handleTrackSelection = (track: 'react' | 'fullstack' | 'devops' | 'challenges') => {
+  const handleTrackSelection = (track: 'react' | 'fullstack' | 'devops' | 'business-analyst' | 'challenges') => {
     setCurrentTrack(track);
     navigate(`/track/${track}`);
   };
@@ -18,11 +18,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <section className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-4">Guia de Estudos para Entrevista de Emprego</h1>
         <p className="text-xl mb-6">
-          Prepare-se para entrevistas técnicas nas áreas de React, Full Stack e DevOps com nosso guia interativo.
+          Prepare-se para entrevistas técnicas nas áreas de React, Full Stack, DevOps e Business Analysis com nosso guia interativo.
         </p>
         <div className="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg">
           <p className="font-medium">
@@ -31,7 +31,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <div 
           onClick={() => handleTrackSelection('react')}
           className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4 border-blue-500"
@@ -69,6 +69,20 @@ const HomePage = () => {
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-500 dark:text-gray-400">8 questões</span>
             <button className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors">
+              Iniciar
+            </button>
+          </div>
+        </div>
+
+        <div 
+          onClick={() => handleTrackSelection('business-analyst')}
+          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4 border-orange-500"
+        >
+          <h2 className="text-2xl font-bold mb-2">Business Analyst</h2>
+          <p className="mb-4">Prepare-se para vagas de Tech Business Analyst: análise de requisitos, documentação, stakeholder management e transformation programs.</p>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-500 dark:text-gray-400">12 questões</span>
+            <button className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors">
               Iniciar
             </button>
           </div>
